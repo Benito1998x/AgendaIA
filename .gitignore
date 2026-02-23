@@ -1,0 +1,57 @@
+# ─── Python / Backend ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# mypy / pyright
+.mypy_cache/
+.pyright/
+pyrightconfig.json
+
+# ─── Node / Frontend ─────────────────────────────────────────────
+node_modules/
+bun.lockb
+
+# ─── OS & Editor ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.suo
+*.sln
+.idea/
+.vscode/
+!.vscode/extensions.json
+
+# ─── Logs ────────────────────────────────────────────────────────
+logs/
+*.log

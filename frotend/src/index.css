@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 3%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 7%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 187 86% 43%;
+    --primary-foreground: 222 47% 3%;
+
+    --secondary: 217 19% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 19% 15%;
+    --muted-foreground: 215 16% 57%;
+
+    --accent: 217 19% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 19% 18%;
+    --input: 217 19% 15%;
+    --ring: 187 86% 43%;
+
+    --radius: 0.5rem;
+
+    /* Priority colors */
+    --priority-urgent: 0 84% 60%;
+    --priority-important: 38 92% 50%;
+    --priority-normal: 160 84% 39%;
+
+    /* Pomodoro */
+    --pomodoro-active: 187 86% 43%;
+    --pomodoro-glow: 187 86% 43%;
+
+    /* Surfaces */
+    --surface-0: 222 47% 3%;
+    --surface-1: 217 33% 7%;
+    --surface-2: 217 19% 12%;
+    --surface-3: 217 19% 18%;
+
+    --sidebar-background: 217 33% 7%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 187 86% 43%;
+    --sidebar-primary-foreground: 222 47% 3%;
+    --sidebar-accent: 217 19% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 19% 18%;
+    --sidebar-ring: 187 86% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(187 86% 43% / 0.15);
+  }
+
+  .glow-cyan-strong {
+    box-shadow: 0 -4px 20px hsl(187 86% 43% / 0.15);
+  }
+
+  .border-priority-urgent {
+    border-left: 3px solid hsl(0 84% 60%);
+  }
+
+  .border-priority-important {
+    border-left: 3px solid hsl(38 92% 50%);
+  }
+
+  .border-priority-normal {
+    border-left: 3px solid hsl(160 84% 39%);
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(217 19% 12%) 0%,
+      hsl(217 19% 18%) 50%,
+      hsl(217 19% 12%) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
